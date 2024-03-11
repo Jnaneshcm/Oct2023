@@ -89,7 +89,7 @@
 						<configuration>
 							<projectName>Salesforce</projectName>
 							<skip>false</skip>
-							<outputDirectory>cucumberreports/html-reports</outputDirectory>
+							<outputDirectory>target/html-reports</outputDirectory>
 							<inputDirectory>target/cucumber-reports</inputDirectory>
 							<jsonFiles>
 								<param>**/*.json</param>
