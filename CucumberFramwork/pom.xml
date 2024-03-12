@@ -99,10 +99,26 @@
 				</executions>
 			</plugin>
 	  
-	  
-	  
-	  
-	  
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>firstExecution</id>
+						<phase>install</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<classpathScope>test</classpathScope>
+							<mainClass>com.cucumber.utilities.SendEmailReport</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+
+
+			</plugin>	  
 	</plugins>
 	</build>
 	
