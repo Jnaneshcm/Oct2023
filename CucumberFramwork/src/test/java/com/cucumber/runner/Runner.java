@@ -34,7 +34,7 @@ public class Runner {
 	public static void teardown() throws InterruptedException {
 	
 		String Source = System.getProperty("user.dir")+ "\\target\\html-reports\\cucumber-html-reports\\overview-features.html";
-		String destination = System.getProperty("user.dir")+"\\target\\html-reports\\cucumber-html-reports\\report.png";
+		String destination = System.getProperty("user.dir")+"\\reportscreenshot\\report.png";
 	
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
