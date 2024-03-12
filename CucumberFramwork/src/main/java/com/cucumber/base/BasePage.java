@@ -19,6 +19,7 @@ public class BasePage {
 
 	public void enterIntoTextbox(String logicalName, String value) {
 		WebElement element = getElement(logicalName);
+		waitforElement(element);
 		element.sendKeys(value);
 		
 	}
