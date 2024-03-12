@@ -30,33 +30,5 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Runner {
 
-	@AfterClass
-	public static void teardown() throws InterruptedException {
 	
-		String Source = System.getProperty("user.dir")+ "\\target\\html-reports\\cucumber-html-reports\\overview-features.html";
-		String destination = System.getProperty("user.dir")+"\\reportscreenshot\\report.png";
-	
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get(Source);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,250)", "");
-		Thread.sleep(1000);
-		File srcfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);		
-		File destFile = new File(destination);
-		
-		driver.close();
-		driver=null;
-		try {
-			Files.copy(srcfile, destFile);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
-
-	}
 }
